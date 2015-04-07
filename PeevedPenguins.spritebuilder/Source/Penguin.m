@@ -10,12 +10,5 @@
 
 @implementation Penguin
 
-- (id)init {
-    self = [super init];
-    if (self) {
-        CCLOG(@"Penguin creado");
-    }
-    return self;
-}
 
 @end
