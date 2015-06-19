@@ -30,12 +30,12 @@
     
     // No queremos que el nodo invisible colisione con nada
     _pullbackNode.physicsBody.collisionMask = @[];
-//    _mouseJointNode.physicsBody.collisionMask = @[];
+    _mouseJointNode.physicsBody.collisionMask = @[];
     
 }
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
-/*
+
     CGPoint touchLocation = [touch locationInNode:_contentNode];
     if (CGRectContainsPoint([_catapultArm boundingBox], touchLocation)) {
         _mouseJointNode.position = touchLocation;
@@ -49,22 +49,21 @@
                                                             damping:150.f];
         
     }
- */
+
 }
 
 - (void)touchMoved:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
-    /*
+    
     CGPoint touchLocation = [touch locationInNode:_contentNode];
     _mouseJointNode.position = touchLocation;
-     */
+
 }
 
 - (void)releaseCatapult {
-    /*
     if (_mouseJoint) {
         [_mouseJoint invalidate];
         _mouseJoint = nil;
-    }*/
+    }
 }
 
 - (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
