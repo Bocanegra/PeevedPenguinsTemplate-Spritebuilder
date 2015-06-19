@@ -12,6 +12,7 @@
     CCPhysicsNode *_physicsNode;
     CCNode *_catapultArm;
     CCNode *_levelNode;
+    CCNode *_contentNode;
     
 }
 
@@ -38,8 +39,13 @@
     // Asegurar que el objeto es visible
     self.position = ccp(0, 0);
     CCActionFollow *actionF = [CCActionFollow actionWithTarget:penguin worldBoundary:self.boundingBox];
-    [self runAction:actionF];
+    [_contentNode runAction:actionF];
     
+}
+
+- (void)retry {
+    // reload this level
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"Gameplay"]];
 }
 
 @end
