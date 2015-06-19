@@ -13,7 +13,7 @@
     CCNode *_catapultArm;
     CCNode *_levelNode;
     CCNode *_contentNode;
-    
+    CCNode *_pullbackNode;
 }
 
 - (void)didLoadFromCCB {
@@ -23,6 +23,9 @@
     
     // Debug physics bodies&joints
     _physicsNode.debugDraw = TRUE;
+    
+    // No queremos que el nodo invisible colisione con nada
+    _pullbackNode.physicsBody.collisionMask = @[];
 }
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
